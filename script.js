@@ -1,5 +1,13 @@
 function minDate(dates) {
   //write you code here
+
+	const dateOb = dates.map(dateString  => new Date(dateString));
+	const date = new Date(Math.min(...dateOb));
+	
+	const ans =  date.toISOString().slice(0,10);
+	return ans;
+	 
+
 }
 
 // Do not change the code
